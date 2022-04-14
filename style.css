@@ -1,6 +1,6 @@
 .s-1 {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   position: relative;
   overflow: hidden;
 }
@@ -142,18 +142,6 @@ img {
   opacity: 40%;
   z-index: -1;
 }
-.h-1-1 {
-  position: absolute;
-  left: 2rem;
-  top: 2rem;
-  background-color: rgb(12, 0, 43);
-  color: rgb(23, 121, 255);
-  z-index: 1000;
-  padding: 8px 2rem;
-  border-radius: 16px;
-  border: 2px solid;
-  font-size: 31px;
-}
 img {
   width: 155px;
   margin-top: 20px;
@@ -169,7 +157,7 @@ img {
 /* responstive */
 @media only screen and (max-width: 765px) {
   .h1 {
-    top: 50px;
+    top: 20%;
     left: 2px;
     bottom: 0;
   }
@@ -204,12 +192,10 @@ img {
     width: 100%;
     height: auto;
   }
- 
 }
 @media (max-aspect-ratio: 16/9) {
   .video {
     width: auto;
     height: 100%;
   }
- 
 }
