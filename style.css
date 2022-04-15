@@ -12,7 +12,7 @@
 }
 .h1 {
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 0;
   width: 100%;
 }
@@ -36,6 +36,7 @@ a.btn {
   position: relative;
   overflow: hidden;
   color: #1670f0;
+  margin-bottom: 2rem;
 }
 
 a.btn::after {
@@ -151,13 +152,54 @@ img {
   opacity: 50%;
 }
 .opr {
-  opacity: 5%;
+  opacity: 2%;
 }
 
+/* box animation */
+.box {
+  position: relative;
+  height: auto;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  /* border-radius: 20px; */
+  padding: 5px 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.box::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 790%;
+  background: linear-gradient(#00ccff, #d400d4);
+  animation: animate 4s linear infinite;
+}
+img {
+  z-index: 10000;
+}
+.box::after {
+  content: "";
+  position: absolute;
+  background: #0e1538;
+  inset: 2px;
+  /* border-radius: 15px; */
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(350deg);
+  }
+}
 /* responstive */
 @media only screen and (max-width: 765px) {
   .h1 {
-    top: 20%;
+    top: 3%;
     left: 2px;
     bottom: 0;
   }
@@ -166,16 +208,35 @@ img {
     font-size: 10px;
     letter-spacing: 1px;
   }
-}
-@media only screen and (max-width: 608px) {
   img {
     width: 120px;
-    margin-top: 50px;
+  }
+  .black {
+    opacity: 20%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  img {
+    width: 120px;
+    margin-top: 0px;
+  }
+  .h1 {
+    top: 1px;
+  }
+  a.btn {
+    margin-bottom: 5px;
+  }
+  .box {
+    width: 130px;
+    text-align: center;
   }
 }
 @media only screen and (max-width: 575px) {
+  a.btn {
+    margin-bottom: 9px;
+  }
   img {
-    width: 80px;
+    width: 50px;
     margin-top: 20px;
   }
   a.btn {
